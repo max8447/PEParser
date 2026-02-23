@@ -6,12 +6,12 @@ Lightweight PE parser
 Command line:
 `PEParser.exe <FilePath> <Options...>`
 
-Command line args:
-`--help`: Show help message
-`-showall`: Enable all options
-`-s`: Show sections
-`-i`: Show imports
-`-e`: Show exports
-`-t`: Show Tls directory
-`-d`: Show debug directory
+Command line args:<br>
+`--help`: Show help message<br>
+`-showall`: Enable all options<br>
+`-s`: Show sections<br>
+`-i`: Show imports<br>
+`-e`: Show exports<br>
+`-t`: Show Tls directory<br>
+`-d`: Show debug directory<br>
 
