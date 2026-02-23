@@ -1,0 +1,6 @@
+[submodule "vendor/BinaryReader"]
+	path = vendor/BinaryReader
+	url = https://github.com/max8447/BinaryReader
+[submodule "vendor/CmdLineParser"]
+	path = vendor/CmdLineParser
+	url = https://github.com/max8447/CmdLineParser
