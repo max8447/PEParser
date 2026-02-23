@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="PEParser/PEParser.vcxproj" Id="51e56784-1112-4385-b3e8-d035c5670768" />
+</Solution>
