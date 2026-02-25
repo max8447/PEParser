@@ -20,7 +20,7 @@ std::string MagicToString(WORD Magic);
 std::string SubsystemToString(WORD Subsystem);
 std::string SectionCharacteristicsToString(DWORD Characteristics);
 
-int main(int argc, char** argv, char** envp)
+int main(int argc, char** argv)
 {
 	if (argc < 2)
 	{
@@ -129,7 +129,7 @@ Define(bool, bShowDebugDir, "-d", false);
 	printf("\tNumber of sections: %hu\n", NTHeader.FileHeader.NumberOfSections);
 	printf("\tTime date stamp: %s\n", TimeDateStampToString(NTHeader.FileHeader.TimeDateStamp).c_str());
 	printf("\tPointer to symbol table: 0x%lX\n", NTHeader.FileHeader.PointerToSymbolTable);
-	printf("\tNumber of symbol: %lu\n", NTHeader.FileHeader.NumberOfSymbols);
+	printf("\tNumber of symbols: %lu\n", NTHeader.FileHeader.NumberOfSymbols);
 	printf("\tSize of optional header: 0x%X\n", NTHeader.FileHeader.SizeOfOptionalHeader);
 	printf("\tCharacteristics: %s\n", FileCharacteristicsToString(NTHeader.FileHeader.Characteristics).c_str());
 
@@ -181,9 +181,6 @@ Define(bool, bShowDebugDir, "-d", false);
 			FileReader.Read(ExportDirectory);
 
 			DWORD RealNameAddress = ToRealAddress(NTHeader, NTHeaderStart, FileReader, ExportDirectory.Name);
-
-			printf("RVA Name address: 0x%lX\n", ExportDirectory.Name);
-			printf("RealNameAddress: 0x%lX\n", RealNameAddress);
 
 			printf("Export directory for %s\n", ReadString(FileReader, RealNameAddress).c_str());
 
@@ -306,6 +303,8 @@ Define(bool, bShowDebugDir, "-d", false);
 
 					TLSCallbackNum++;
 				}
+
+				NumTLSCallbacks--;
 			}
 		}
 		else
