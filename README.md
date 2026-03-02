@@ -15,3 +15,7 @@ Command line args:<br>
 `-t`: Show Tls directory<br>
 `-d`: Show debug directory<br>
 
+# Compiling
+
+For now, only Visual Studio 26 project files are included, a build system may be added later on.
+You can also download the latest release for the precompiled `release` binary.
